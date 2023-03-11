@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.header__h{
+    border-bottom: 0.01em solid rgba(163, 163, 163, 0.507);
+    padding: 2vw 0;
+    font-size: 1.7em;
+}
+.meme{
+    border-bottom: 0.01em solid rgba(163, 163, 163, 0.507);
+}
+input{
+    display: none;
+}
+.meme__label{
+    display: block;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.meme__name{
+    font-weight: 700;
+    font-size: 1.5em;
+}
+.plus{
+    font-weight: 900;
+    font-size: 2em;
+}
+.meme__img{
+    display: block;
+    width:0%;
+    margin: 0.1em auto;
+    transition: .3s;
+}
+input:checked ~ .meme__img{
+    width: 90%;
+}
+input:checked ~ .flex-container .plus{
+    transform: rotate(45deg);
+}
+
+@media(min-width:425px){
+    .header__h{
+        font-size: 1.5em;
+    }
+    .meme__name{
+        font-size: 1.3em;
+    }
+    input:checked ~ .meme__img{
+        width: 70%;
+    }
+}
+
+@media(min-width:768px){
+    .container{
+        width: 70%;
+    }
+    .header__h{
+        font-size: 2em;
+    }
+    .plus{
+        opacity: 0;
+    }
+    .meme__label{
+        padding: 0.5vw 0;
+        color: blue;
+    }
+    .main__container:hover .flex-container .plus{
+        opacity: 1;
+    }
+    .main__container:hover .flex-container{
+        color: black;
+    }
+    label:hover{
+        cursor: pointer;
+    }
+    input:checked ~ .meme__img{
+        width: 40%;
+    }
+    input:checked ~ .flex-container{
+        color: black;
+    }
+
+    label:hover .meme__img{
+        width: 40%;
+    }
+    label:hover .flex-container .plus{
+        transform: rotate(45deg);
+    }
+
+    label:active{
+        opacity: 0.8;
+    }
+}
