@@ -49,14 +49,35 @@ input{
 .meme__img{
     display: block;
     width:0%;
-    margin: 0 auto;
+    margin: 0.1em auto;
     transition: .3s;
 }
 
 #first-meme__input:checked ~ .first-meme__img{
     width: 90%;
 }
-
 #first-meme__input:checked ~ .flex-container .first-meme__plus{
+    transform: rotate(45deg);
+}
+
+#second-meme__input:checked ~ .second-meme__img{
+    width: 90%;
+}
+#second-meme__input:checked ~ .flex-container .second-meme__plus{
+    transform: rotate(45deg);
+}
+
+#third-meme__input:checked ~ .third-meme__img{
+    width: 90%;
+}
+#third-meme__input:checked ~ .flex-container .third-meme__plus{
+    transform: rotate(45deg);
+}
+
+#fourth-meme__input:checked ~ .fourth-meme__img{
+    width: 90%;
+}
+
+#fourth-meme__input:checked ~ .flex-container .fourth-meme__plus{
     transform: rotate(45deg);
 }
