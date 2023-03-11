@@ -12,14 +12,15 @@ body{
     margin: 0 auto;
 }
 
+
 .header__h{
-    text-align: center;
-    border-bottom: 1px solid rgba(163, 163, 163, 0.507);
+    border-bottom: 0.01em solid rgba(163, 163, 163, 0.507);
     padding: 2vw 0;
+    font-size: 1.7em;
 }
 
 .meme{
-    border-bottom: 1px solid rgba(163, 163, 163, 0.507);
+    border-bottom: 0.01em solid rgba(163, 163, 163, 0.507);
 }
 
 input{
@@ -53,6 +54,10 @@ input{
     transition: .3s;
 }
 
+
+
+
+
 #first-meme__input:checked ~ .first-meme__img{
     width: 90%;
 }
@@ -77,7 +82,108 @@ input{
 #fourth-meme__input:checked ~ .fourth-meme__img{
     width: 90%;
 }
-
 #fourth-meme__input:checked ~ .flex-container .fourth-meme__plus{
     transform: rotate(45deg);
+}
+
+@media(min-width:425px){
+    .header__h{
+        font-size: 1.5em;
+    }
+    .meme__name{
+        font-size: 1.3em;
+    }
+    #first-meme__input:checked ~ .first-meme__img{
+        width: 70%;
+    }
+    #second-meme__input:checked ~ .second-meme__img{
+        width: 70%;
+    }
+    #third-meme__input:checked ~ .third-meme__img{
+        width: 70%;
+    }
+    #fourth-meme__input:checked ~ .fourth-meme__img{
+        width: 70%;
+    }
+}
+
+@media(min-width:768px){
+    .container{
+        width: 70%;
+    }
+    .header__h{
+        font-size: 2em;
+    }
+    .plus{
+        opacity: 0;
+    }
+    .meme__label{
+        padding: 0.5vw 0;
+        color: blue;
+    }
+    .main__container:hover .flex-container .plus{
+        opacity: 1;
+    }
+    .main__container:hover .flex-container{
+        color: black;
+    }
+    label:hover{
+        cursor: pointer;
+    }
+    #first-meme__input:checked ~ .first-meme__img{
+        width: 40%;
+    }
+    #first-meme__input:checked ~ .flex-container{
+        color: black;
+    }
+    #second-meme__input:checked ~ .second-meme__img{
+        width: 40%;
+    }
+    #second-meme__input:checked ~ .flex-container{
+        color: black;
+    }
+    #third-meme__input:checked ~ .third-meme__img{
+        width: 40%;
+    }
+    #third-meme__input:checked ~ .flex-container{
+        color: black;
+    }
+    #fourth-meme__input:checked ~ .fourth-meme__img{
+        width: 40%;
+    }
+    #fourth-meme__input:checked ~ .flex-container{
+        color: black;
+    }
+
+    label:hover .first-meme__img{
+        width: 40%;
+    }
+    label:hover .flex-container .first-meme__plus{
+        transform: rotate(45deg);
+    }
+
+    label:hover .second-meme__img{
+        width: 40%;
+    }
+    label:hover .flex-container .second-meme__plus{
+        transform: rotate(45deg);
+    }
+
+    label:hover .third-meme__img{
+        width: 40%;
+    }
+    label:hover .flex-container .third-meme__plus{
+        transform: rotate(45deg);
+    }
+
+    label:hover .fourth-meme__img{
+        width: 40%;
+    }
+    label:hover .flex-container .fourth-meme__plus{
+        transform: rotate(45deg);
+    }
+
+    label:active{
+        opacity: 0.8;
+    }
 }
