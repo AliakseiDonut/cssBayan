@@ -18,3 +18,45 @@ body{
     padding: 2vw 0;
 }
 
+.meme{
+    border-bottom: 1px solid rgba(163, 163, 163, 0.507);
+}
+
+input{
+    display: none;
+}
+
+.meme__label{
+    display: block;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.meme__name{
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.plus{
+    font-weight: 900;
+    font-size: 2em;
+}
+
+.meme__img{
+    display: block;
+    width:0%;
+    margin: 0 auto;
+    transition: .3s;
+}
+
+#first-meme__input:checked ~ .first-meme__img{
+    width: 90%;
+}
+
+#first-meme__input:checked ~ .flex-container .first-meme__plus{
+    transform: rotate(45deg);
+}
