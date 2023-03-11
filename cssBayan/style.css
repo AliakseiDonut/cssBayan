@@ -2,87 +2,50 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 .container{
     width: 80%;
     margin: 0 auto;
 }
-
-
 .header__h{
     border-bottom: 0.01em solid rgba(163, 163, 163, 0.507);
     padding: 2vw 0;
     font-size: 1.7em;
 }
-
 .meme{
     border-bottom: 0.01em solid rgba(163, 163, 163, 0.507);
 }
-
 input{
     display: none;
 }
-
 .meme__label{
     display: block;
 }
-
 .flex-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .meme__name{
     font-weight: 700;
     font-size: 1.5em;
 }
-
 .plus{
     font-weight: 900;
     font-size: 2em;
 }
-
 .meme__img{
     display: block;
     width:0%;
     margin: 0.1em auto;
     transition: .3s;
 }
-
-
-
-
-
-#first-meme__input:checked ~ .first-meme__img{
+input:checked ~ .meme__img{
     width: 90%;
 }
-#first-meme__input:checked ~ .flex-container .first-meme__plus{
-    transform: rotate(45deg);
-}
-
-#second-meme__input:checked ~ .second-meme__img{
-    width: 90%;
-}
-#second-meme__input:checked ~ .flex-container .second-meme__plus{
-    transform: rotate(45deg);
-}
-
-#third-meme__input:checked ~ .third-meme__img{
-    width: 90%;
-}
-#third-meme__input:checked ~ .flex-container .third-meme__plus{
-    transform: rotate(45deg);
-}
-
-#fourth-meme__input:checked ~ .fourth-meme__img{
-    width: 90%;
-}
-#fourth-meme__input:checked ~ .flex-container .fourth-meme__plus{
+input:checked ~ .flex-container .plus{
     transform: rotate(45deg);
 }
 
@@ -93,16 +56,7 @@ input{
     .meme__name{
         font-size: 1.3em;
     }
-    #first-meme__input:checked ~ .first-meme__img{
-        width: 70%;
-    }
-    #second-meme__input:checked ~ .second-meme__img{
-        width: 70%;
-    }
-    #third-meme__input:checked ~ .third-meme__img{
-        width: 70%;
-    }
-    #fourth-meme__input:checked ~ .fourth-meme__img{
+    input:checked ~ .meme__img{
         width: 70%;
     }
 }
@@ -130,56 +84,17 @@ input{
     label:hover{
         cursor: pointer;
     }
-    #first-meme__input:checked ~ .first-meme__img{
+    input:checked ~ .meme__img{
         width: 40%;
     }
-    #first-meme__input:checked ~ .flex-container{
-        color: black;
-    }
-    #second-meme__input:checked ~ .second-meme__img{
-        width: 40%;
-    }
-    #second-meme__input:checked ~ .flex-container{
-        color: black;
-    }
-    #third-meme__input:checked ~ .third-meme__img{
-        width: 40%;
-    }
-    #third-meme__input:checked ~ .flex-container{
-        color: black;
-    }
-    #fourth-meme__input:checked ~ .fourth-meme__img{
-        width: 40%;
-    }
-    #fourth-meme__input:checked ~ .flex-container{
+    input:checked ~ .flex-container{
         color: black;
     }
 
-    label:hover .first-meme__img{
+    label:hover .meme__img{
         width: 40%;
     }
-    label:hover .flex-container .first-meme__plus{
-        transform: rotate(45deg);
-    }
-
-    label:hover .second-meme__img{
-        width: 40%;
-    }
-    label:hover .flex-container .second-meme__plus{
-        transform: rotate(45deg);
-    }
-
-    label:hover .third-meme__img{
-        width: 40%;
-    }
-    label:hover .flex-container .third-meme__plus{
-        transform: rotate(45deg);
-    }
-
-    label:hover .fourth-meme__img{
-        width: 40%;
-    }
-    label:hover .flex-container .fourth-meme__plus{
+    label:hover .flex-container .plus{
         transform: rotate(45deg);
     }
 
